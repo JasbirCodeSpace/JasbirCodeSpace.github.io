@@ -379,6 +379,7 @@ body{
 
 @media screen and (max-width: 55em) {
 	.content__title{
-		margin: 25vh 0 0 0;
+		margin: 10vh 0 0 0;
+		font-size: 7vh;
 	}
 }

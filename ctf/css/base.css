@@ -455,4 +455,7 @@ a.demo--current {
 	.demo {
 		margin: 0 0.5em;
 	}
+	.fixed-top{
+		position: sticky;
+	}
 }
