@@ -199,7 +199,7 @@
     font-weight: 700;
     border: 3px solid white;
   }
-  .button-group button:hover {
+  .button-group button:not(.button-group .active):hover {
     background: white;
     color: #222222;
     border: 3px solid #222222;
@@ -214,7 +214,9 @@
 
   @media only screen and (max-width: 600px) {
     .button-group{
-      flex-direction: column;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
     }
   }
 
