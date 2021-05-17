@@ -184,7 +184,7 @@ class Collapse {
   }}
 
 
-let makeMePretty = document.querySelector(".collapse");
+let makeMePretty = document.querySelector(".collapse-container");
 let accordion = new Collapse(makeMePretty, { accordion: true }).init();
 
 

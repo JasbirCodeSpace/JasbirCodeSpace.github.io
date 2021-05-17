@@ -38,17 +38,25 @@
   }
   
   html {
+    margin: 0;
+    min-height: 100vh;
     background: #f8f5fe;
     color: #3c334d;
   }
   
   body {
-    font: 1em/1.4 "Quicksand", sans-serif;
-    margin: 0 auto;
-    max-width: 960px;
-    padding: 5vw;
+    margin: 0;
+    /* font: 1em/1.4 "Quicksand", sans-serif; */
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    max-width: 100vw;
   }
-  
+  .main{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
   h1 {
     font-size: 2em;
     margin-bottom: 1em;
@@ -77,17 +85,6 @@
     color: #e96384;
   }
   
-  a {
-    color: #8f63e9;
-    box-shadow: inset 0 -3px #cfbcf5;
-    font-weight: 700;
-    text-decoration: none;
-    transition: 0.2s;
-  }
-  a:hover, a:focus {
-    box-shadow: inset 0 -1.2em #8f63e9;
-    color: #f8f5fe;
-  }
   
   abbr {
     font-variant: small-caps;
@@ -103,7 +100,7 @@
   }
   [type=checkbox] + label {
     background: #efe7fd;
-    border-left: 4px solid #5b13ec;
+    border-left: 4px solid #3f51b5;
     cursor: pointer;
     display: block;
     font-size: 1rem;
@@ -115,7 +112,7 @@
   [type=checkbox] + label::before {
     border: 2px solid;
     border-radius: 2px;
-    color: #5b13ec;
+    color: #3f51b5;
     content: "";
     display: inline-block;
     margin-right: 0.75ch;
@@ -125,7 +122,7 @@
     vertical-align: baseline;
   }
   [type=checkbox]:focus + label {
-    outline: 2px solid #5b13ec;
+    outline: 2px solid #3f51b5;
   }
   [type=checkbox]:checked + label::before {
     background: currentColor;
@@ -158,7 +155,12 @@
     padding: 1em;
   }
   summary:focus {
-    outline: 2px solid #5b13ec;
+    outline: 2px solid #3f51b5;
+  }
+
+  .collapse-container{
+    margin-left: auto;
+    margin-right: auto;
   }
   .collapse-init summary::after {
     border-right: 2px solid;
@@ -172,7 +174,7 @@
     transition: inherit;
   }
   [open] summary {
-    background: #5b13ec;
+    background: #3f51b5;
     color: #f8f5fe;
   }
   [open] summary::after {
@@ -206,20 +208,55 @@
     cursor: pointer;
   }
   .button-group .active {
-    background: #5b13ec;
+    background: #3f51b5;
     color: #fff;
-    border: 3px solid #5b13ed;
+    border: 3px solid #3f51b5;
     cursor: pointer;
   }
+  .button-group .active svg{
+    fill: #fff;
+  }
+
+  .title{
+    font-family: raleway;
+    /* font-weight: bold; */
+  }
+
+  .logo-row{
+    text-align: center;
+  }
+  .logo {
+    height: 20vh;
+    width:auto;
+    text-align: center;
+  }
+    /* svg icons */
+    svg{
+      margin: 0 auto;
+      width:25px;
+      height: 25px;
+    }
+    .MuiTab-wrapper{
+      display: flex;
+      flex-direction: column;
+    }
 
   @media only screen and (max-width: 600px) {
     .button-group{
       flex-direction: row;
       justify-content: center;
-      flex-wrap: wrap;
+      /* flex-wrap: wrap; */
+    }
+    .button-group button{
+      margin: 0;
+      padding: 0.5em;
     }
   }
 
   .hidden{
     display: none;
   }
+
+
+  
+  
